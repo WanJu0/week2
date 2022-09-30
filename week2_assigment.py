@@ -11,10 +11,14 @@ calculate(-1, 2, 2)
 # 要求二:Python 字典與列表
 def avg(data):
     result=0
+    nums=[]
     for i in range(0,len(data["employees"]),1):
         if data["employees"][i]["manager"]==False:
             result+=data["employees"][i]["salary"]
-    print(result)
+            nums.append(result)
+    avg_salary=result/len(nums)
+    print(int(avg_salary))
+
 avg({
     "employees":
         [ 

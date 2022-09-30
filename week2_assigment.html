@@ -26,15 +26,20 @@
             function avg(data)
             {
                 let result=0;
+                let nums=[];
                 for (let i=0; i<data.employees.length;i++)
                 {
                     if(data.employees[i].manager==false)
                     {
                         result=result+data.employees[i].salary;
-                        //console.log(result);
+                        nums.push(result)
+                        
                     }
                 }
-                console.log(result);
+                avg_salary=result/nums.length;
+                console.log(avg_salary);
+                // console.log(nums);   
+                // console.log(result);
             }
             avg(
             {
